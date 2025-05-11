@@ -1,1 +1,167 @@
 [2025-05-11 06:10:51,946: INFO: main: Welcome to our custom log]
+[2025-05-11 21:27:09,142: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-11 21:27:09,145: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-11 21:32:32,575: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-11 21:32:32,575: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-11 22:04:54,599: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-05-11 22:04:54,600: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-11 22:04:54,600: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-11 22:04:54,601: INFO: common: created directory at: artifacts]
+[2025-05-11 22:04:54,601: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-05-11 22:04:54,601: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1C9K6JMeGAbG7jmY8ag1YRMbrHW8q0vQg/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-05-11 22:07:07,936: ERROR: main: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?/export=download&id=1C9K6JMeGAbG7jmY8ag1YRMbrHW8q0vQg (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7cdd3fc53b00>: Failed to establish a new connection: [Errno 101] Network is unreachable'))]
+Traceback (most recent call last):
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connection.py", line 704, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7cdd3fc53b00>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?/export=download&id=1C9K6JMeGAbG7jmY8ag1YRMbrHW8q0vQg (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7cdd3fc53b00>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/main.py", line 14, in <module>
+    data_ingestion.main()
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/src/cnnClassifier/pipeline/stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/src/cnnClassifier/components/data_ingestion.py", line 33, in download_file
+    raise e
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/src/cnnClassifier/components/data_ingestion.py", line 28, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/gdown/download.py", line 202, in download
+    res = sess.get(url, stream=True, verify=verify)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?/export=download&id=1C9K6JMeGAbG7jmY8ag1YRMbrHW8q0vQg (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7cdd3fc53b00>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-05-11 22:09:53,071: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-05-11 22:09:53,072: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-11 22:09:53,073: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-11 22:09:53,074: INFO: common: created directory at: artifacts]
+[2025-05-11 22:09:53,074: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-05-11 22:09:53,074: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1C9K6JMeGAbG7jmY8ag1YRMbrHW8q0vQg/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-05-11 22:12:06,944: ERROR: main: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?/export=download&id=1C9K6JMeGAbG7jmY8ag1YRMbrHW8q0vQg (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x78bc002805c0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))]
+Traceback (most recent call last):
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connection.py", line 704, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x78bc002805c0>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?/export=download&id=1C9K6JMeGAbG7jmY8ag1YRMbrHW8q0vQg (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x78bc002805c0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/main.py", line 14, in <module>
+    data_ingestion.main()
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/src/cnnClassifier/pipeline/stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/src/cnnClassifier/components/data_ingestion.py", line 33, in download_file
+    raise e
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/src/cnnClassifier/components/data_ingestion.py", line 28, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/gdown/download.py", line 202, in download
+    res = sess.get(url, stream=True, verify=verify)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?/export=download&id=1C9K6JMeGAbG7jmY8ag1YRMbrHW8q0vQg (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x78bc002805c0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-05-11 22:15:20,363: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-05-11 22:15:20,365: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-11 22:15:20,366: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-11 22:15:20,366: INFO: common: created directory at: artifacts]
+[2025-05-11 22:15:20,366: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-05-11 22:15:20,366: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1C9K6JMeGAbG7jmY8ag1YRMbrHW8q0vQg/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-05-11 22:16:30,222: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1C9K6JMeGAbG7jmY8ag1YRMbrHW8q0vQg/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-05-11 22:16:44,920: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
