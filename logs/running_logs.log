@@ -165,3 +165,20 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='drive.google.com'
 [2025-05-11 22:16:44,920: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
 
 x==========x]
+[2025-05-11 23:07:50,918: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-05-11 23:07:50,921: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-11 23:07:50,923: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-11 23:07:50,923: INFO: common: created directory at: artifacts]
+[2025-05-11 23:07:50,923: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-05-11 23:07:50,923: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1C9K6JMeGAbG7jmY8ag1YRMbrHW8q0vQg/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-05-11 23:09:12,944: INFO: main: *******************]
+[2025-05-11 23:09:12,944: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2025-05-11 23:09:12,945: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-11 23:09:12,946: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-11 23:09:12,946: INFO: common: created directory at: artifacts]
+[2025-05-11 23:09:12,946: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-05-11 23:09:18,035: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-05-11 23:09:18,188: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-05-11 23:09:18,308: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
