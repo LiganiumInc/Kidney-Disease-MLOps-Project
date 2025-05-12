@@ -37,3 +37,32 @@ source kidney_env/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
+
+## MLflow
+
+- [Documentation](https://mlflow.org/docs/latest/index.html)
+
+- [MLflow tutorial](https://youtu.be/qdcHHrsXA48?si=bD5vDS60akNphkem)
+
+##### cmd
+- mlflow ui
+
+### dagshub
+[dagshub](https://dagshub.com/)
+
+MLFLOW_TRACKING_URI=https://dagshub.com/LiganiumInc/Kidney-Disease-MLOps-Project.mlflow \
+MLFLOW_TRACKING_USERNAME=LiganiumInc \
+MLFLOW_TRACKING_PASSWORD=5fddef3bd464e06d5aa57d95ad1be392a0a913fd \
+python script.py
+
+Run this to export as env variables:
+
+```bash
+
+export MLFLOW_TRACKING_URI=https://dagshub.com/LiganiumInc/Kidney-Disease-MLOps-Project.mlflow
+
+export MLFLOW_TRACKING_USERNAME=LiganiumInc
+
+export MLFLOW_TRACKING_PASSWORD=5fddef3bd464e06d5aa57d95ad1be392a0a913fd
+
+```
