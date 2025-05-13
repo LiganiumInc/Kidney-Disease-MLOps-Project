@@ -1024,3 +1024,65 @@ x==========x]
 [2025-05-13 18:12:50,596: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
 
 x==========x]
+[2025-05-13 22:33:43,742: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-05-13 22:33:43,744: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-13 22:33:43,745: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-13 22:33:43,745: INFO: common: created directory at: artifacts]
+[2025-05-13 22:33:43,745: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-05-13 22:33:43,746: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/17BJwWDAin2sJCpJ7-iZTba3OxNhv7vc-/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-05-13 22:39:27,149: INFO: stage_02_prepare_base_model: *******************]
+[2025-05-13 22:39:27,150: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2025-05-13 22:39:27,152: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-13 22:39:27,154: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-13 22:39:27,155: INFO: common: created directory at: artifacts]
+[2025-05-13 22:39:27,155: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-05-13 22:39:48,062: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-05-13 22:43:30,432: INFO: stage_02_prepare_base_model: *******************]
+[2025-05-13 22:43:30,432: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2025-05-13 22:43:30,434: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-13 22:43:30,436: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-13 22:43:30,436: INFO: common: created directory at: artifacts]
+[2025-05-13 22:43:30,437: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-05-13 22:43:32,559: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-05-13 22:43:32,718: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-05-13 22:43:32,826: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-05-13 22:43:44,467: INFO: stage_03_model_training: *******************]
+[2025-05-13 22:43:44,467: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2025-05-13 22:43:44,469: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-13 22:43:44,470: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-13 22:43:44,470: INFO: common: created directory at: artifacts]
+[2025-05-13 22:43:44,470: INFO: common: created directory at: artifacts/training]
+[2025-05-13 22:43:44,806: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-05-13 22:53:48,286: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-05-13 22:53:48,395: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-05-13 22:53:55,440: INFO: stage_04_model_evaluation: *******************]
+[2025-05-13 22:53:55,440: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-05-13 22:53:55,442: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-13 22:53:55,443: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-13 22:53:55,443: INFO: common: created directory at: artifacts]
+[2025-05-13 22:53:55,771: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-05-13 22:56:51,534: INFO: common: json file saved at: scores.json]
+[2025-05-13 22:56:51,534: INFO: common: json file saved at: scores.json]
+[2025-05-13 22:56:51,534: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2025-05-13 23:09:55,446: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-05-13 23:09:55,447: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-13 23:09:55,449: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-13 23:09:55,449: INFO: common: created directory at: artifacts]
+[2025-05-13 23:09:55,449: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-05-13 23:09:55,449: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/17BJwWDAin2sJCpJ7-iZTba3OxNhv7vc-/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-05-13 23:10:32,267: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/17BJwWDAin2sJCpJ7-iZTba3OxNhv7vc-/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-05-13 23:10:40,370: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-05-14 00:21:00,187: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.155.16.55:8080]
+[2025-05-14 00:21:00,187: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-05-14 00:21:14,590: INFO: _internal: 127.0.0.1 - - [14/May/2025 00:21:14] "GET / HTTP/1.1" 200 -]
