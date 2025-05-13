@@ -774,3 +774,253 @@ x==========x]
 [2025-05-12 12:40:07,730: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
 
 x==========x]
+[2025-05-12 12:47:53,344: INFO: main: *******************]
+[2025-05-12 12:47:53,344: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-05-12 12:47:53,346: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-12 12:47:53,348: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-12 12:47:53,348: INFO: common: created directory at: artifacts]
+[2025-05-12 12:47:55,446: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-05-12 16:32:54,266: INFO: common: json file saved at: scores.json]
+[2025-05-12 16:32:54,267: INFO: common: json file saved at: scores.json]
+[2025-05-12 16:32:54,267: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2025-05-13 17:14:17,533: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-05-13 17:14:17,535: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-13 17:14:17,537: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-13 17:14:17,537: INFO: common: created directory at: artifacts]
+[2025-05-13 17:14:17,537: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-05-13 17:14:17,537: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/17BJwWDAin2sJCpJ7-iZTba3OxNhv7vc-/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-05-13 17:16:33,442: ERROR: main: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?/export=download&id=17BJwWDAin2sJCpJ7-iZTba3OxNhv7vc- (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ed50a2dbad0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))]
+Traceback (most recent call last):
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connection.py", line 704, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7ed50a2dbad0>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?/export=download&id=17BJwWDAin2sJCpJ7-iZTba3OxNhv7vc- (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ed50a2dbad0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/main.py", line 14, in <module>
+    data_ingestion.main()
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/src/cnnClassifier/pipeline/stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/src/cnnClassifier/components/data_ingestion.py", line 33, in download_file
+    raise e
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/src/cnnClassifier/components/data_ingestion.py", line 28, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/gdown/download.py", line 202, in download
+    res = sess.get(url, stream=True, verify=verify)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?/export=download&id=17BJwWDAin2sJCpJ7-iZTba3OxNhv7vc- (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ed50a2dbad0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-05-13 17:17:02,604: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-05-13 17:17:02,606: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-13 17:17:02,607: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-13 17:17:02,607: INFO: common: created directory at: artifacts]
+[2025-05-13 17:17:02,607: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-05-13 17:17:02,607: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/17BJwWDAin2sJCpJ7-iZTba3OxNhv7vc-/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-05-13 17:19:17,282: ERROR: main: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?/export=download&id=17BJwWDAin2sJCpJ7-iZTba3OxNhv7vc- (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x79ede7d31190>: Failed to establish a new connection: [Errno 101] Network is unreachable'))]
+Traceback (most recent call last):
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connection.py", line 704, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x79ede7d31190>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?/export=download&id=17BJwWDAin2sJCpJ7-iZTba3OxNhv7vc- (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x79ede7d31190>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/main.py", line 14, in <module>
+    data_ingestion.main()
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/src/cnnClassifier/pipeline/stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/src/cnnClassifier/components/data_ingestion.py", line 33, in download_file
+    raise e
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/src/cnnClassifier/components/data_ingestion.py", line 28, in download_file
+    gdown.download(prefix+file_id,zip_download_dir)
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/gdown/download.py", line 202, in download
+    res = sess.get(url, stream=True, verify=verify)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/liganium/Data/Complete End to End Deep Learning Project With MLFLOW,DVC And Deployment/Kidney-Disease-MLOps-Project/kidney_env/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?/export=download&id=17BJwWDAin2sJCpJ7-iZTba3OxNhv7vc- (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x79ede7d31190>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-05-13 17:19:45,575: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-05-13 17:19:45,576: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-13 17:19:45,577: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-13 17:19:45,577: INFO: common: created directory at: artifacts]
+[2025-05-13 17:19:45,577: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-05-13 17:19:45,577: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/17BJwWDAin2sJCpJ7-iZTba3OxNhv7vc-/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-05-13 17:24:41,171: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/17BJwWDAin2sJCpJ7-iZTba3OxNhv7vc-/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-05-13 17:24:49,225: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-05-13 17:24:49,225: INFO: main: *******************]
+[2025-05-13 17:24:49,225: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2025-05-13 17:24:49,226: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-13 17:24:49,227: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-13 17:24:49,228: INFO: common: created directory at: artifacts]
+[2025-05-13 17:24:49,228: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-05-13 17:24:51,447: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-05-13 17:24:51,670: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-05-13 17:24:51,805: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-05-13 17:24:51,805: INFO: main: *******************]
+[2025-05-13 17:24:51,805: INFO: main: >>>>>> stage Training started <<<<<<]
+[2025-05-13 17:24:51,807: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-13 17:24:51,808: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-13 17:24:51,808: INFO: common: created directory at: artifacts]
+[2025-05-13 17:24:51,808: INFO: common: created directory at: artifacts/training]
+[2025-05-13 17:24:51,995: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-05-13 17:34:42,593: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-05-13 17:34:42,675: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-05-13 17:34:42,675: INFO: main: *******************]
+[2025-05-13 17:34:42,675: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-05-13 17:34:42,676: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-13 17:34:42,677: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-13 17:34:42,678: INFO: common: created directory at: artifacts]
+[2025-05-13 17:34:42,838: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-05-13 17:37:39,182: INFO: common: json file saved at: scores.json]
+[2025-05-13 17:37:39,182: INFO: common: json file saved at: scores.json]
+[2025-05-13 17:37:39,182: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2025-05-13 17:41:53,115: INFO: main: *******************]
+[2025-05-13 17:41:53,115: INFO: main: >>>>>> stage Training started <<<<<<]
+[2025-05-13 17:41:53,117: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-13 17:41:53,118: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-13 17:41:53,118: INFO: common: created directory at: artifacts]
+[2025-05-13 17:41:53,118: INFO: common: created directory at: artifacts/training]
+[2025-05-13 17:41:55,010: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-05-13 17:53:40,250: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-05-13 17:53:40,358: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-05-13 17:53:40,358: INFO: main: *******************]
+[2025-05-13 17:53:40,358: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-05-13 17:53:40,359: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-13 17:53:40,360: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-13 17:53:40,360: INFO: common: created directory at: artifacts]
+[2025-05-13 17:53:40,519: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-05-13 17:56:35,832: INFO: common: json file saved at: scores.json]
+[2025-05-13 17:56:35,832: INFO: common: json file saved at: scores.json]
+[2025-05-13 17:56:53,649: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2025-05-13 17:59:14,421: INFO: main: *******************]
+[2025-05-13 17:59:14,421: INFO: main: >>>>>> stage Training started <<<<<<]
+[2025-05-13 17:59:14,423: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-13 17:59:14,424: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-13 17:59:14,424: INFO: common: created directory at: artifacts]
+[2025-05-13 17:59:14,424: INFO: common: created directory at: artifacts/training]
+[2025-05-13 17:59:16,481: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-05-13 18:09:28,700: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-05-13 18:09:28,830: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-05-13 18:09:28,831: INFO: main: *******************]
+[2025-05-13 18:09:28,831: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-05-13 18:09:28,832: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-05-13 18:09:28,833: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-13 18:09:28,833: INFO: common: created directory at: artifacts]
+[2025-05-13 18:09:29,004: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-05-13 18:12:32,421: INFO: common: json file saved at: scores.json]
+[2025-05-13 18:12:32,421: INFO: common: json file saved at: scores.json]
+[2025-05-13 18:12:50,596: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
